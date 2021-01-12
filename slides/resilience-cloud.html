@@ -251,11 +251,50 @@ En effet il aura fallut aux ingénieurs et aux chercheurs, trouver des solutions
   <h2 style="text-shadow: 2px 2.5px rgba(0, 0, 0, 0.70); margin-top: auto; color: white;">
     Clusterisation
   </h2>
-  <img   src="">
+  <img   src="/images/cluster.png">
 
   <aside data-markdown class="notes">
+    Dès la fin des années 1980, les ingénieurs 
+    développent un multi-ordinateur : l'idée est de fusionner 
+    les ressources fournit par plusieurs ordinateurs pour 
+    en former un nouveau qui sera virtuel. C'est ce qu'on 
+    appel une grappe serveur ou un cluster.
 
+    Cette approche va de pair avec les techniques
+     visant à mieux répartir la charge, mais pas que. 
+     En effet, cela permet d'augmenter la disponibilité, 
+     de mieux gérer la scalabilité et de faciliter la gestion 
+     des ressources (processeur, mémoire vive, stockage, bande passante...).
+     Ici, on change de paradigme : les serveurs ne répondent pas individuellement 
+     aux requêtes, mais forment un tout, qui y répondra, où 
+     le calcule y est divisé entre les nœuds du cluster.
+     Les avantages sont multiples :
 
+     *Baisse des coûts : Le coût d’acquisition et de maintenance 
+     d’un cluster est plus faible que le coût d’acquisition 
+     d’un serveur central sur le long terme. En d’autres termes,
+      il revient moins chère à une entreprise d’ajouter un nœud 
+      à un cluster (scalabilité horizontale) que d’ajouter des 
+      capacités supplémentaires à un serveur central (scalabilité vertical).
+     
+     *La scalabilité horizontale : Le regroupement d’ordinateurs en
+      architecture distribuée possède une caractéristique très
+      intéressante sur les clusters : la scalabilité horizontale.
+      L’ajout d’un ordinateur supplémentaire dans un cluster 
+      augmente de façon plus que proportionnelle la performance
+      du cluster.
+     
+    * La haute disponibilité ou tolérance aux pannes : 
+    Le regroupement d’ordinateurs en clusters permet de distribuer
+     le traitement entre ceux-ci, ce qui offre la capacité au système
+      de continuer à fonctionner malgré les défaillances, ce qui 
+      n’est pas le cas dans les architectures centralisées dans 
+      lesquelles la disponibilité de tout le système repose entièrement 
+      sur un point : le serveur central (Single Point of Failure)
+
+      Parler de la migration à chaud 
+      
+  
   </aside>
 </section>
 
@@ -264,11 +303,32 @@ En effet il aura fallut aux ingénieurs et aux chercheurs, trouver des solutions
   <h2 style="text-shadow: 2px 2.5px rgba(0, 0, 0, 0.70); margin-top: auto; color: white;">
     Architecture micro-service
   </h2>
-  <img   src="">
+  <img   src="/images/archimicroservices.png">
 
   <aside data-markdown class="notes">
 
+    En 2011 apparait le concept d'architecture
+     micro-service, la philosophie s'inspire
+      grandement de celle d'UNIX : "Ne faire qu'une seule chose et la faire bien". 
+      L'idée n'est plus de structurer l'application en un seul bloc, 
+      mais de découpler ses modules en un ensemble de services, 
+      ces derniers communiquant ensemble par le biais d'interfaces
+       commun.
 
+       L'approche offre des avantages conséquents, elle facilite 
+       le développement distribué, réduit les cycles de développement 
+       puisque les équipes peuvent livrer chaque service indépendamment 
+       des autres, facilite le déploiement, augmente la résilience : le faible couplage 
+       entre les services permet qu'en cas de dysfonctionnement d'un des services que 
+       l'application reste opérationnel.
+
+    Néanmoins, l'approche comporte des challenges à relever : dorénavant il faut gérer 
+    non plus une seule application, mais un essaim d'applications plus petite (micro-service) 
+    qu'il faut être capable de gérer.
+
+    Grâce à l'utilisation de conteneurs et d'orchestrateurs, il devient facile pour l'organisme 
+    de déployer selon ses besoins, l'ensemble des micro-services sur son infrastructure.
+    
   </aside>
 </section>
 
