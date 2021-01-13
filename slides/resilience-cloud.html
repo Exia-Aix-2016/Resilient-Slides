@@ -16,7 +16,14 @@
     </aside>
   </section>
 
-  
+
+  <section>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1200px-Mod%C3%A8le-client-serveur.svg.png"/>
+    <aside data-markdown class="notes">
+      Parler des rôles client/serveur cette approche cause plein de petits soucis
+    </aside>
+  </section>
+
 <!--Technologies-->
 <section>
   <h2 style="margin-top: auto;">
@@ -37,6 +44,8 @@
 
   </aside>
 </section>
+
+
 
 <!--Répondre à la demande-->
 <section data-background-image="https://i.imgur.com/LcrrGy8.png">
@@ -158,39 +167,6 @@
   </aside>
 </section>
 
-<!--Orchestration-->
-<section >
-  <h2>
-    Orchestration
-  </h2>
-  <img   src="/images/orchestration.png">
-
-  <aside data-markdown class="notes">
-
-  L'orchestration permet d'automatiser le déploiement
-  et la gestion de la mise à l'échelle (scalabilité)
-  et la mise en réseau des conteneurs.
-
-  L'orchestrateur va s'occuper de répartir les conteneurs 
-  sur les différents serveurs, selon les besoins en matière 
-  de mémoire et de CPU. Il va notamment s'occuper de 
-  surveiller l'activité des conteneurs pour connaitre à 
-  tout instant leur état de santé. En cas de mise en défaut 
-  d'un conteneur, l'orchestrateur peut le redémarrer voir le 
-  supprimer et en recréer un. Si un des serveurs est indisponible,
-  il peut redémarrer les conteneurs sur un autre serveur.
-
-  L'orchestrateur permet d'assurer la mise à jour des conteneurs de manière successive sans induire d'indisponibilité, c'est ce que l'on nomme le rolling update. Il peut aussi revenir en arrière en cas de problème.
-
-  Les conteneurs étant par nature volatile, les informations réseau 
-  de chaque conteneur (ex: adresse IP) est variable. L'orchestrateur
-  offre un niveau d'abstraction permettant de regrouper un ou plusieurs 
-  conteneurs, de leur allouer une adresse IP fixe et de l'exposer 
-  à d'autres conteneurs.
-  Ces fonctions confèrent à l'infrastructure un niveau de résilience accru.
-
-  </aside>
-</section>
 
 <!--Clusterisation-->
 <section >
@@ -244,6 +220,43 @@
   </aside>
 </section>
 
+<!--Orchestration-->
+<section >
+  <h2>
+    Orchestration
+  </h2>
+  <img style="width: 50%;"   src="/images/orchestration.png">
+
+  <aside data-markdown class="notes">
+
+  L'orchestration permet d'automatiser le déploiement
+  et la gestion de la mise à l'échelle (scalabilité)
+  et la mise en réseau des conteneurs.
+
+  L'orchestrateur va s'occuper de répartir les conteneurs 
+  sur les différents serveurs, selon les besoins en matière 
+  de mémoire et de CPU. Il va notamment s'occuper de 
+  surveiller l'activité des conteneurs pour connaitre à 
+  tout instant leur état de santé. En cas de mise en défaut 
+  d'un conteneur, l'orchestrateur peut le redémarrer voir le 
+  supprimer et en recréer un. Si un des serveurs est indisponible,
+  il peut redémarrer les conteneurs sur un autre serveur.
+
+  L'orchestrateur permet d'assurer la mise à jour des conteneurs de manière successive 
+  sans induire d'indisponibilité, c'est ce que l'on nomme le rolling update.
+   Il peut aussi revenir en arrière en cas de problème.
+
+  Les conteneurs étant par nature volatile, les informations réseau 
+  de chaque conteneur (ex: adresse IP) est variable. L'orchestrateur
+  offre un niveau d'abstraction permettant de regrouper un ou plusieurs 
+  conteneurs, de leur allouer une adresse IP fixe et de l'exposer 
+  à d'autres conteneurs.
+  Ces fonctions confèrent à l'infrastructure un niveau de résilience accru.
+
+  </aside>
+</section>
+
+
 <!--Architecture micro-service-->
 <section >
   <h2>
@@ -294,31 +307,6 @@
     à disposition le contenu d'un serveur principal.
 
     A noter : Si le serveur principal est tombé, le contenu est accessible.
-  </aside>
-</section>
-
-<!--L'hyperconvergence-->
-<section >
-  <h2>
-    L'Hyper-convergence
-  </h2>
-  <img   src="/images/hyperconvergence.png">
-
-  <aside data-markdown class="notes">
-    En 2012 apparait le terme d'Hyper-convergence, 
-    l'idée est de pousser à son paroxysme le principe de cluster, 
-    d'unicité, et de découpler drastiquement le matériel (serveur, routeur, commutateur, etc...) 
-    de la partie logicielle, dans le but d'accroitre l'évolutivité et de réduire la complexité.
-    
-    Système de fichiers distribué (DFS)
-    Dans cette optique, le système utilise directement 
-    le stockage présent dans les serveurs afin d’en faire 
-    un pool de stockage partagé.
-    
-    On parle alors de système de fichiers distribué. 
-    Les systèmes de fichiers distribué garantissent
-     que les données ne soient pas corrompues ou perdues.
-
   </aside>
 </section>
 
