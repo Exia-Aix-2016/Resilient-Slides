@@ -7,6 +7,7 @@ import 'reveal.js/dist/theme/moon.css';
 let deck = new Reveal({
    slideNumber: true,
    controls: false,
+   hash: true,
    plugins: [ Markdown, Notes ]
 });
 
