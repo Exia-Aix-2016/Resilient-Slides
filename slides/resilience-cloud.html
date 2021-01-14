@@ -8,7 +8,10 @@
       du cloud computing
     </h2>
     <aside class="notes">
-
+      COmme la expliqué quentin,
+      <br />
+      La démocratisation des services <br />
+      L'augmentation du nombre de client
 
     </aside>
   </section>
@@ -17,7 +20,13 @@
   <section>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Mod%C3%A8le-client-serveur.svg/1200px-Mod%C3%A8le-client-serveur.svg.png"/>
     <aside data-markdown class="notes">
-      Parler des rôles client/serveur cette approche cause plein de petits soucis
+     Internet c'est le branchement de millier de réseau <br />
+     proposant des millions de services.
+     <br />
+     Pour Proposer une ressource, il faut aborder la manière donc vous <br />
+     Accedez à ces ressources
+     <br />
+     Le client requêtes une ressource et le serveur répond à celle-ci
     </aside>
   </section>
 
@@ -50,15 +59,14 @@
     Répondre <br /> à la demande
   </h2>
   <aside data-markdown class="notes">
-  la première approche utilisée par les entreprises, 
-  consistait à centraliser le stockage et le traitement
-  des données dans un serveur central. Un des premiers
-  obstacles rencontré était de répondre à la demande 
-  grandissante pour un service donné, pensez aux moteurs 
-  de recherche, aux sites d'achat, de streaming, le nombre 
-  d'utilisateurs n'a cessé d'augmenter, cette augmentation 
-  implique d'utiliser de plus en plus de ressources pour y répondre. 
-  Un seul serveur ne suffisait plus...
+
+    Dans un premier temps les entreprises proposer ces ressources <br />
+    en centralisant le stockage et le traitement sur un immense serveur central.
+    <br /> 
+    Pensez maintenant : l'augmentation du nombre d'utilisation, implique sur le serveur
+
+    DIRE QU'IL CRASH SA RACE !
+
 
   </aside>
 </section>
@@ -73,9 +81,14 @@
   <img style=" width: 55%;" src="/images/scalability.png">
   <aside data-markdown class="notes">
   - Parler des deux approches
-
+  <br />
   - Parler des limites...
   Pour horizontal : c'est aussi applicatif.
+  <br />
+  
+  
+
+
 
   </aside>
 </section>
@@ -98,7 +111,14 @@
   </div>
   
   <aside data-markdown class="notes">
-    Parler du Geographic dns
+    Sauf que cette approche est static, une application par serveur
+    <br />
+    il serait d'autant plus efficace si il était possible de répartir sur non serveur
+    notre application selon les besoins sur les serveurs.
+    <br />
+    De plus en cas de problème sur un serveur, il serait biens
+    de pouvoir retiré facilement l'application et la déplacer sur un autre
+    
   </aside>
 </section>
 
@@ -110,29 +130,38 @@
   <img style="width: 55%;"   src="/images/virtualisation.png">
 
   <aside data-markdown class="notes">
+  La virtualisation permets de résoudre ça 
+  <br />
+  Expliquer
+  <br />
   Avant, les applications adoptaient une 
   architecture monolithique qui, bien que simple à déployer, 
   était compliquée à gérer quand déployées sur le même serveur.
-  De plus, avec la montée en puissance d'internet, de plus en plus 
-  d'entreprises voient leur système d'information subir des cyberattaques,
-  pouvant endommager leur système hôte. Les organismes ont donc besoin de
-  système sécurisé, d'être capable de migrer facilement leur solution 
-  logicielle et de déployer efficacement sur leur infrastructure.
-  En 1960 la firme IBM créé le premier système de virtualisation de serveur,
-  au cours des années 80-90 l'apparition de l'architecture processeur x86 démocratise le principe,
-  ce qui vient répondre aux problématiques citées ci-dessus. 
 
+  <br />
   Utilisation optimale des ressources du parc informatique.
-
+  <br />
   Installation, déploiement, migration facilité des applications du système d'information.
-
+  <br />
   Economie matériel et énergétique en mutualisant les ressources.
-
+  <br />
   Permet de mettre en place des environnements de testes pour les équipes de développement, ce qui améliore la qualité.
-
+  <br />
   Sécurisation des systèmes grâce à l'isolation des systèmes hôte et des réseaux.
-
+  <br />
   Allocation dynamique des ressources allouées aux systèmes virtualisés.
+  
+  <br />
+
+  Cependant une machine virtuel c'est un comme je l'ai dit un système en entier qui est virtualiser
+  <br />
+  De plus les machine virtuelle fonctionne grâce à des logiciel de virtualisation, <br />
+  une vm d'un logiciel A ne tourne pas sur un logiciel B
+  
+  <br />
+  Bien qu'on soit capable de répartir grace à la virtualisation nos app, c'est lourd, c'est long, ça consomme beraucoup.
+
+
 
   </aside>
 </section>
@@ -150,17 +179,17 @@
 
 
   <aside data-markdown class="notes">
+    
+     Pour résoudre ces problèmatiques on a inventé la conteneurisation
+     <br />
+     L'idée n'est plus de virtualiser le système mais l'application.
+     <br />
+     La containeisation vise à répondre à ces problème
 
-  Dès le début des années 2000, le concept de containeurisation 
-  se développe, l'idée n'est plus de virtualiser un système d'exploitation 
-  qui fait ensuite tourner une application métier, 
-  mais de virtualiser chaque application.
+     <br />
+    
 
-  Les conteneurs encapsulent un package applicatif qui comprends seulement le code de l'application, 
-  ses dépendances et ses fichiers de configuration. 
-  Pour fonctionner les conteneurs font appel à un logiciel qui s'occupera de les exécuter et les gérer.
-
-  Portabilité : Cette approche permet notamment de rendre chaque application portable, chaque conteneur peut être déployé autant sur une machine Linux ou Windows ou même dans un système virtualisé.
+  Standardisation : L'instar des conteneurs dans la vrai vie, grâce à ça on peut augmenter la DENSITER d'application dans notre système
 
   Légèreté : Les conteneurs partagent le même noyau système, celui de la machine, il n'y a aucun système virtualisé nécessaire à les faire fonctionner, cela demande moins de ressources au serveur. De plus, contrairement à une machine virtuelle standard, un conteneur mettra beaucoup moins de temps à démarrer.
 
@@ -180,45 +209,30 @@
   <img style="width: 50%;"  src="/images/cluster.png">
 
   <aside data-markdown class="notes">
-    Dès la fin des années 1980, les ingénieurs 
-    développent un multi-ordinateur : l'idée est de fusionner 
-    les ressources fournit par plusieurs ordinateurs pour 
-    en former un nouveau qui sera virtuel. C'est ce qu'on 
-    appel une grappe serveur ou un cluster.
 
-    Cette approche va de pair avec les techniques
-     visant à mieux répartir la charge, mais pas que. 
-     En effet, cela permet d'augmenter la disponibilité, 
-     de mieux gérer la scalabilité et de faciliter la gestion 
-     des ressources (processeur, mémoire vive, stockage, bande passante...).
-     Ici, on change de paradigme : les serveurs ne répondent pas individuellement 
-     aux requêtes, mais forment un tout, qui y répondra, où 
-     le calcule y est divisé entre les nœuds du cluster.
-     Les avantages sont multiples :
+    Afin de toujours répondre à la demande et améliorer la résilience de notre système.
+    <br />
 
-     *Baisse des coûts : Le coût d’acquisition et de maintenance 
-     d’un cluster est plus faible que le coût d’acquisition 
-     d’un serveur central sur le long terme. En d’autres termes,
-      il revient moins chère à une entreprise d’ajouter un nœud 
-      à un cluster (scalabilité horizontale) que d’ajouter des 
-      capacités supplémentaires à un serveur central (scalabilité vertical).
-     
-     *La scalabilité horizontale : Le regroupement d’ordinateurs en
-      architecture distribuée possède une caractéristique très
-      intéressante sur les clusters : la scalabilité horizontale.
-      L’ajout d’un ordinateur supplémentaire dans un cluster 
-      augmente de façon plus que proportionnelle la performance
-      du cluster.
-     
-    * La haute disponibilité ou tolérance aux pannes : 
-    Le regroupement d’ordinateurs en clusters permet de distribuer
-     le traitement entre ceux-ci, ce qui offre la capacité au système
-      de continuer à fonctionner malgré les défaillances, ce qui 
-      n’est pas le cas dans les architectures centralisées dans 
-      lesquelles la disponibilité de tout le système repose entièrement 
-      sur un point : le serveur central (Single Point of Failure)
+    Les ingénieurs on penser à :
+    <br />
 
-      Parler de la migration à chaud 
+     <br />
+
+     Facilité de management
+     <br />
+
+     Augmentation de la disponibilité
+
+     <br />
+
+     *Baisse des coûts
+      <br />
+
+     *La scalabilité horizontale
+      <br />
+
+    * La haute disponibilité ou tolérance aux pannes 
+
       
   
   </aside>
@@ -233,22 +247,22 @@
 
   <aside data-markdown class="notes">
 
+    Cependant grâce on conteneur et leur avantage, l'augmentation du nombre de conteneur 
+    <br />
+    implique des probleme de gestion - avant c'était manuel
+    <br />
+    Du coup pour automatiser ça on a inventer l'orchestration
+    <br />
+
+
   L'orchestration permet d'automatiser le déploiement
   et la gestion de la mise à l'échelle (scalabilité)
   et la mise en réseau des conteneurs.
 
   L'orchestrateur va s'occuper de répartir les conteneurs 
-  sur les différents serveurs, selon les besoins en matière 
-  de mémoire et de CPU. Il va notamment s'occuper de 
-  surveiller l'activité des conteneurs pour connaitre à 
-  tout instant leur état de santé. En cas de mise en défaut 
-  d'un conteneur, l'orchestrateur peut le redémarrer voir le 
-  supprimer et en recréer un. Si un des serveurs est indisponible,
-  il peut redémarrer les conteneurs sur un autre serveur.
 
-  L'orchestrateur permet d'assurer la mise à jour des conteneurs de manière successive 
-  sans induire d'indisponibilité, c'est ce que l'on nomme le rolling update.
-   Il peut aussi revenir en arrière en cas de problème.
+
+    mise à jour - rolling update, rollback
 
   Les conteneurs étant par nature volatile, les informations réseau 
   de chaque conteneur (ex: adresse IP) est variable. L'orchestrateur
@@ -278,16 +292,17 @@
       ces derniers communiquant ensemble par le biais d'interfaces
        commun.
 
+       <br />
+
        L'approche offre des avantages conséquents, elle facilite 
        le développement distribué, réduit les cycles de développement 
        puisque les équipes peuvent livrer chaque service indépendamment 
-       des autres, facilite le déploiement, augmente la résilience : le faible couplage 
+       des autres, facilite le déploiement, 
+       <br />
+
+       augmente la résilience : le faible couplage 
        entre les services permet qu'en cas de dysfonctionnement d'un des services que 
        l'application reste opérationnel.
-
-    Néanmoins, l'approche comporte des challenges à relever : dorénavant il faut gérer 
-    non plus une seule application, mais un essaim d'applications plus petite (micro-service) 
-    qu'il faut être capable de gérer.
 
     Grâce à l'utilisation de conteneurs et d'orchestrateurs, il devient facile pour l'organisme 
     de déployer selon ses besoins, l'ensemble des micro-services sur son infrastructure.
@@ -321,8 +336,15 @@
     En Résumé...
   </h2>
   <aside data-markdown class="notes">
-    Rapeler ce qu'on a vue.
-    Ces techno c'est le socles des cloud aujourd'hui
+    Nous avons vue les technologies permettant de supporter 
+    <br />
+    la charge toujours grandissante, cependant ces technologies
+    <br />
+    bien qu'inovantes comporte des problèmes,
+    <br />
+    problèmes qui seront présenté par Denis, après la pause de 10min.
+    <br />
+    Je vous remercie.
   </aside>
 </section>
 </section>
